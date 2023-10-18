@@ -99,9 +99,8 @@ nav a{
     text-decoration: none;
 }
 .nav-button>button{
-    border: 1px solid var(--text-secondary-color);
+    border: 1px solid var(--light-blue-color);
     background-color: var(--light-blue-color);
-    
     padding: 15px;
     border-radius: 5px;
     font-family: Montserrat;
@@ -426,6 +425,7 @@ nav a{
     background-color: var(--text-secondary-color);
     border: 1px solid var(--text-secondary-color);
     padding: 50px 40px;
+    border-radius: 10px;
 }
 .price-first{
     display: flex;
@@ -501,6 +501,9 @@ nav a{
     background-color: var(--light-blue-color);
     margin-inline: auto;
 }
+.touch{
+    display: none;
+}
 footer{
     width: 58%;
     margin-inline: auto;
@@ -563,9 +566,28 @@ footer h2{
     margin-inline: auto;
 }
 @media (min-width:768px){
+    .hero-section{
+        width: 70%;
+        margin-inline: auto;
+    }
+    .strategy{
+        width: 70%;
+        margin-inline: auto;
+    }
+    .client{
+        width: 70%;
+        margin-inline: auto;
+    }
+    .pricing{
+        width: 70%;
+        margin-inline: auto;
+    }
     .header-icons{
         width: fit-content;
         margin-bottom: 0px;
+    }
+    .header-icons>h3{
+        font-size: 24px;
     }
     .icons{
         display: none;
@@ -592,13 +614,16 @@ footer h2{
         letter-spacing: 0.20000000298023224px;
     }
     .hero-section-text{
+        margin-top: 173px;
         width: 100%;
     }
     .hero-section-text>h1{
         width: 100%;
+        font-size: 58px;
     }
     .hero-section-text>p{
         width: 100%;
+        font-size: 20px;
     }
     .strategy-content{
         grid-template-columns: repeat(2, 1fr);
@@ -608,5 +633,181 @@ footer h2{
     }
     .faq-desc{
         grid-template-columns: repeat(2, 1fr);
+    }
+    .client-desc{
+        width: 70%;
+        margin-inline: auto;
+    }
+    .details{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width:992px){
+    .hero-section{
+        width: 90%;
+        margin-inline: auto;
+    }
+    header{
+        width: 90%;
+        max-width: 1050px;
+        margin-inline: auto;
+    }
+    .strategy{
+        width: 90%;
+        max-width: 1050px;
+        margin-inline: auto;
+        padding-top: 0px;
+        margin-top: 95px;
+    }
+    .touch{
+        width: 90%;
+        max-width: 1050px;
+        margin-inline: auto;
+        margin: 80px auto;
+        display: flex;
+        gap: 225px;
+        align-items: center;
+    }
+    .client{
+        width: 90%;
+        max-width: 1050px;
+        margin-inline: auto;
+    }
+    .pricing{
+        width: 90%;
+        max-width: 1050px;
+        margin-inline: auto;
+        padding: 0px;
+        margin-bottom: 112px;
+    }
+    footer{
+        width: 90%;
+        max-width: 1050px;
+        margin-inline: auto;
+    }
+    .nav-button{
+        display: flex;
+    }
+    .hero-sec{
+        display: flex;
+        gap: 20px;
+    }
+    .hero-section{
+        padding-bottom: 0px;
+    }
+    .hero-section-text{
+        width: 45%;
+        margin-top: 130px;
+    }
+    .hero-section-img{
+        flex-grow: 1;
+    }
+    .hero-section-text>h1{
+        text-align: left;
+        width: 100%;
+    }
+    .hero-section-text>p{
+        width: 100%;
+        text-align: left;
+        margin-left: 0px;
+    }
+    .hero-button{
+        flex-direction: row;
+        gap: 10px;
+        width: fit-content;
+    }
+    .strategy-heading{
+        width: 45%;
+    }
+    .strategy-content{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    .strategy-action{
+        gap: 10px;
+    }
+    .client>p{
+        width: 50%;
+        margin-inline: auto;
+        margin-bottom: 80px;
+    }
+    .client-desc{
+        margin-bottom: 237px;
+    }
+    .client-desc>p{
+        width: 65%;
+        margin-inline: auto;
+    }
+    .faq{
+        margin-bottom: 192px;
+    }
+    .faq>p{
+        width: 45%;
+        margin-inline: auto;
+    }
+    .faq-desc{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    .pricing>p{
+        width: 45%;
+        margin-inline: auto;
+    }
+    .details{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .touch-text{
+        width: 45%;
+    }
+    .touch-text>h2{
+        color: var(--text-secondary-color);
+        font-family: Montserrat;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 57px;
+        letter-spacing: 0.20000000298023224px;
+        text-align: left;
+    }
+    .touch-text>p{
+        color: var(--text-secondary-color);
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0.20000000298023224px;
+        text-align: left;
+    }
+    .touch-input{
+        display: flex;
+        border: 1px solid var(--text-secondary-color);
+        background-color: var(--text-secondary-color);
+        border-radius: 5px;
+    }
+    .touch-input>input{
+        padding: 15px 50px 15px 20px;
+        border: none;
+    }
+    .touch-input>button{
+        color: var(--text-secondary-color);
+        background-color: var(--light-blue-color);
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0.20000000298023224px;
+        text-align: center;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border: 0px;
+        padding: 15px 22.5px;
+    }
+    footer{
+        grid-template-columns: repeat(4, 1fr);
     }
 }
