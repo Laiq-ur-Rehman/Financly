@@ -9,6 +9,7 @@
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+    font-family: 'Montserrat', sans-serif;
 }
 .main{
     background-color: var(--background-color);
@@ -40,10 +41,13 @@ header{
 .icons{
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 8px;
 }
 #openSidebarMenu{
     display: none;
+}
+#openSidebarMenu:checked~.side-menu{
+    display: block;
 }
 .sidebarIconToggle{
     width: 24px;
@@ -51,6 +55,7 @@ header{
     flex-direction: column;
     gap: 5px;
     align-items: end;
+    position: relative;
 }
 .spinner-top{
     width: 24px;
@@ -67,10 +72,37 @@ header{
     height: 1px;
     border: 1px solid var(--text-secondary-color);
 }
+.side-menu{
+    position: absolute;
+    left: 0%;
+    top: 20%;
+    height: 100vh;
+    background-color: var(--background-color);
+    width: 100%;
+    display: none;
+}
+.side-menu ul{
+    align-items: center;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.side-menu a{
+    text-decoration: none;
+    color: var(--text-secondary-color);
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: center;
+}
 nav{
     width: fit-content;
     margin-inline: auto;
-    margin-bottom: 182px;  
+    margin-bottom: 182px; 
+    display: none; 
 }
 nav>ul{
     list-style-type: none;
@@ -103,7 +135,6 @@ nav a{
 }
 .nav-button>a:hover{
     background-color: var(--light-blue-color);
-    transform: scaleX(1.1);
 }
 .nav-button>button{
     border: none;
@@ -118,10 +149,9 @@ nav a{
     transition: all 0.1s ease-in-out;
 }
 .nav-button>button:hover{
-    background-color: transparent;
-    transform: scaleX(1.1);
+    background-color: var(--background-color);
     cursor: pointer;
-    border: 1px solid var(--text-secondary-color);
+    border: 0.01px solid var(--text-secondary-color);
 }
 .nav-button>button>a{
     text-decoration: none;
@@ -163,7 +193,8 @@ nav a{
     text-decoration: none;
     color: var(--text-secondary-color);
     border-radius: 37px;
-    background-color: var(--light-blue-color);
+    background-color: var(--background-color);
+    border: 1px solid var(--text-secondary-color);
     font-family: Montserrat;
     font-size: 14px;
     font-weight: 700;
@@ -173,8 +204,8 @@ nav a{
     transition: all 0.1s ease-in-out;
 }
 .hero-button>a:hover{
-    background-color: transparent;
-    border: 1px solid var(--text-secondary-color);
+    background-color: var(--light-blue-color);
+    border: 1px solid var(--light-blue-color);
 }
 .hero-button>button{
     display: block;
@@ -238,6 +269,7 @@ nav a{
     gap: 15px;
     width: 100%;
     background-color: var(--text-secondary-color);
+    border-radius: 5px;
 }
 .para>p{
     color: var(--text-primary-color);
@@ -261,7 +293,8 @@ nav a{
     text-decoration: none;
     color: var(--text-secondary-color);
     border-radius: 37px;
-    background-color: var(--light-blue-color);
+    background-color: var(--background-color);
+    border: 1px solid var(--text-secondary-color);
     font-family: Montserrat;
     font-size: 14px;
     font-weight: 700;
@@ -271,8 +304,8 @@ nav a{
     transition: all 0.1s ease-in-out;
 }
 .strategy-action>a:hover{
-    background-color: transparent;
-    border: 1px solid var(--text-secondary-color);
+    background-color: var(--light-blue-color);
+    border: 1px solid var(--light-blue-color);
 }
 .strategy-action>button{
     display: block;
@@ -469,6 +502,9 @@ nav a{
     border: 1px solid var(--light-blue-color);
     color: var(--text-secondary-color);
 }
+.price:hover label{
+    background-color: #2DC071;
+}
 .price:hover h2{
     color: var(--text-secondary-color);
 }
@@ -547,6 +583,14 @@ nav a{
     display: flex;
     align-items: center;
     gap: 10px;
+}
+.price-design>input{
+    display: none;
+}
+.price-design>label{
+    border-radius: 50%;
+    padding: 10px 10px;
+    background-color: #BDBDBD;
 }
 .price-third>button{
     display: block;
@@ -658,6 +702,7 @@ footer h2{
     nav{
         margin: 0px;
         width: fit-content;
+        display: block;
     }
     nav>ul{
         flex-direction: row;
@@ -848,6 +893,9 @@ footer h2{
     .touch-input>input{
         padding: 15px 50px 15px 20px;
         border: none;
+    }
+    .touch-input>input:focus{
+        border: 1px solid white;
     }
     .touch-input>button{
         color: var(--text-secondary-color);
