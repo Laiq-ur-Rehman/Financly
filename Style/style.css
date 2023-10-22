@@ -139,6 +139,7 @@ nav a{
 .nav-button>button{
     border: none;
     background-color: var(--light-blue-color);
+    border: 1px solid var(--light-blue-color);
     padding: 15px;
     border-radius: 5px;
     font-family: Montserrat;
@@ -149,9 +150,9 @@ nav a{
     transition: all 0.1s ease-in-out;
 }
 .nav-button>button:hover{
-    background-color: var(--background-color);
+    background-color: transparent;
     cursor: pointer;
-    border: 0.01px solid var(--text-secondary-color);
+    border: 1px solid var(--text-secondary-color);
 }
 .nav-button>button>a{
     text-decoration: none;
@@ -501,6 +502,8 @@ nav a{
     background-color: var(--light-blue-color);
     border: 1px solid var(--light-blue-color);
     color: var(--text-secondary-color);
+    transform: scaleY(1.02);
+    transform-origin: bottom;
 }
 .price:hover label{
     background-color: #2DC071;
